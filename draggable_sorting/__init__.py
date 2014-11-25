@@ -8,4 +8,4 @@ class DraggableMixin(object):
             '/static/draggable_sorting/vendor/jquery-ui/jquery-ui.js',
             '/static/draggable_sorting/js/draggable.js',
         ]
-        super(Dr, self).__init__(*args, **kwargs)
+        super(DraggableMixin, self).__init__(*args, **kwargs)
