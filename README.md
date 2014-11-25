@@ -15,7 +15,6 @@ This package DOES NOT ship with jQuery.
     ```shell
        pip install -e git+https://github.com/diveru4i/django-draggable_sorting.git#egg=draggable_sorting
     ```
-
 2. Add "draggable_sorting" to your INSTALLED_APPS setting for collectstatic
     ```python
        INSTALLED_APPS = (
@@ -25,12 +24,20 @@ This package DOES NOT ship with jQuery.
            
        )
     ```
-
 3. Run 
-   ```bash
+   ```shell
       ./manage.py collectstatic
    ```
-4. In your ```admin.py```:
+4. You'll need to add field "order" to your model:
+    ```python
+        class YourModel(admin.Model):
+            order = models.PositiveSmallIntegerField(default=1)
+            ...
+            
+            class Meta:
+                ordering = ['order']
+    ```
+5. In your ```admin.py```:
    ```python
       ...
       from draggable_sorting import DraggableMixin
