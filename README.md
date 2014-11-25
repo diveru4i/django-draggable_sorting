@@ -12,7 +12,7 @@ This package DOES NOT ship with jQuery.
 ## Quick start
 
 1. Install:
-    ```shell
+    ```
        pip install -e git+https://github.com/diveru4i/django-draggable_sorting.git#egg=draggable_sorting
     ```
 2. Add "draggable_sorting" to your INSTALLED_APPS setting for collectstatic
@@ -25,7 +25,7 @@ This package DOES NOT ship with jQuery.
        )
     ```
 3. Run 
-   ```shell
+   ```
       ./manage.py collectstatic
    ```
 4. You'll need to add field "order" to your model:
